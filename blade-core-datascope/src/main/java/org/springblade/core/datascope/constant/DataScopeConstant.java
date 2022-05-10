@@ -29,12 +29,12 @@ public interface DataScopeConstant {
 	/**
 	 * 获取部门数据
 	 */
-	String DATA_BY_DEPT = "select id from blade_dept where ancestors like concat(concat('%', ?),'%') and is_deleted = 0";
+	String DATA_BY_DEPT = "select id from sys_dept where ancestors like concat(concat('%', ?),'%') and is_deleted = 0";
 
 	/**
 	 * 根据resourceCode获取数据权限配置
 	 */
-	String DATA_BY_CODE = "select resource_code, scope_column, scope_field, scope_type, scope_value from blade_scope_data where resource_code = ?";
+	String DATA_BY_CODE = "select resource_code, scope_column, scope_field, scope_type, scope_value from sys_scope_data where resource_code = ?";
 
 	/**
 	 * 根据mapperId获取数据权限配置
@@ -43,7 +43,7 @@ public interface DataScopeConstant {
 	 * @return String
 	 */
 	static String dataByMapper(int size) {
-		return "select resource_code, scope_column, scope_field, scope_type, scope_value from blade_scope_data where scope_class = ? and id in (select scope_id from blade_role_scope where role_id in (" + buildHolder(size) + "))";
+		return "select resource_code, scope_column, scope_field, scope_type, scope_value from sys_scope_data where scope_class = ? and id in (select scope_id from sys_role_scope where role_id in (" + buildHolder(size) + "))";
 	}
 
 	/**

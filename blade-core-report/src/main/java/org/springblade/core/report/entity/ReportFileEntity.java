@@ -30,7 +30,7 @@ import java.util.Date;
  * @author Chill
  */
 @Data
-@TableName("blade_report_file")
+@TableName("syss_report_file")
 public class ReportFileEntity implements Serializable {
 
 	private static final long serialVersionUID = 1L;

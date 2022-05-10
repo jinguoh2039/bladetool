@@ -27,7 +27,7 @@ import java.io.Serializable;
  * @author Chill
  */
 @Data
-@TableName("blade_log_error")
+@TableName("sys_log_error")
 public class LogError extends LogAbstract implements Serializable {
 
 	private static final long serialVersionUID = 1L;

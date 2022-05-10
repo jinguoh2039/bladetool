@@ -74,11 +74,11 @@ public class BladeCodeGenerator {
 	/**
 	 * 需要去掉的表前缀
 	 */
-	private String[] tablePrefix = {"blade_"};
+	private String[] tablePrefix = {"sys_"};
 	/**
 	 * 需要生成的表名(两者只能取其一)
 	 */
-	private String[] includeTables = {"blade_test"};
+	private String[] includeTables = {"sys_test"};
 	/**
 	 * 需要排除的表名(两者只能取其一)
 	 */
